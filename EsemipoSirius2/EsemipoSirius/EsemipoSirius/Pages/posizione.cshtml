@@ -1,0 +1,18 @@
+﻿@page
+@model EsemipoSirius.Pages.posizioneModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1> Estrai la posizione del dispositivo </h1>
+
+<form action="/posizione" method="get">
+    <input type="text" name="NomeDevice" value="" />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+<ul>
+    @foreach (var dispositivo in @Model.altLatLong)
+    {
+        <li>@dispositivo.altitudine - @dispositivo.latitudine - @dispositivo.longitudine</li>
+    }
+</ul>

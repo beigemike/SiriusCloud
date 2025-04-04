@@ -1,0 +1,18 @@
+﻿@page
+@model EsemipoSirius.Pages.nominalPowerModel
+@{
+    ViewData["Title"] = "Estrai tutti i dispositivi";
+}
+
+<h1> Estrai il nome dei dispositivi dato il valore del nominal Power </h1>
+<br />
+<form action="/nominalPower" method="get">
+    <input type="number" name="valoreNominalPower" value="" />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+<ul>
+    @foreach (var dispositivo in @Model.elencoDispDaPw)
+    {
+        <li>@dispositivo.Device</li>
+    }
+</ul>
