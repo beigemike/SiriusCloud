@@ -50,5 +50,3 @@ namespace EsemipoSirius.Pages
         }
     }
 }
-
-/*test2*/
