@@ -1833,11 +1833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
       "projectName": "EsemipoSirius",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
+      "projectPath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
