@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EsemipoSirius")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+215ae2f3e5dd8f77604587194f4e29df4bb00822")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d894d2feb9924857f424dc59b12b22caecd260e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("EsemipoSirius")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EsemipoSirius")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

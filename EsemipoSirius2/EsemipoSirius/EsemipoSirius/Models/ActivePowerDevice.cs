@@ -5,6 +5,8 @@
         public DateTime? Date { get; set; }
         public float? ActivePower { get; set; }
 
-        "test"
+        /* "test" */
+
+        public int MyProperty { get; set; }
     }
 }
