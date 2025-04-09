@@ -63,6 +63,7 @@ namespace EsemipoSirius.Database
                      
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
+                            List<ActivePowerDevice> totActivePower = new List<ActivePowerDevice>();
                             while (reader.Read())
                             {
                                 ActivePowerDevice dispositivo = new ActivePowerDevice();
@@ -79,7 +80,6 @@ namespace EsemipoSirius.Database
                                     dispositivo.ActivePower = null;
                                 }
 
-
                                 DateTime Date;
                                 bool testDate = DateTime.TryParse(reader["Date"].ToString(), out Date);
 
@@ -91,10 +91,14 @@ namespace EsemipoSirius.Database
                                 {
                                     dispositivo.Date = null;
                                 }
+                                totActivePower.Add(dispositivo);
                                 elenco.Add(dispositivo);
                             }
+                            Media(totActivePower);
                         }
                     }
+
+
 
                 }
                 catch (Exception ex)
@@ -104,7 +108,28 @@ namespace EsemipoSirius.Database
             }
             return elenco;
         }
+
+
+       public void Media(List<ActivePowerDevice?> activePower)
+       {
+            ActivePowerDevice test = activePower[0];
+            DateTime? dataInizio = test.Date;
+            DateTime? dataSuccessiva = dataInizio?.AddDays(1);
+            List<ActivePowerDevice> sommaActivePower = new List<ActivePowerDevice>();
+            float? somma = 0;
+            float count = 0;
+            foreach(ActivePowerDevice a in activePower)
+            {
+                
+                if(a.Date < dataSuccessiva)
+                {
+                    somma += a.ActivePower;
+                    count++;
+                }
+            }
+            float? media = somma / count;
+        }
+
+
     }
 }
-
-/*test*/

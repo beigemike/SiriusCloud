@@ -4,8 +4,5 @@
     {
         public DateTime? Date { get; set; }
         public float? ActivePower { get; set; }
-
-
-        /*test2*/
     }
 }
