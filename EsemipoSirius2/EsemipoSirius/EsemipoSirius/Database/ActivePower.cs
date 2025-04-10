@@ -94,7 +94,7 @@ namespace EsemipoSirius.Database
                                 totActivePower.Add(dispositivo);
                                 elenco.Add(dispositivo);
                             }
-                            Media(totActivePower);
+                           return Media(totActivePower);
                         }
                     }
 
@@ -110,26 +110,43 @@ namespace EsemipoSirius.Database
         }
 
 
-       public void Media(List<ActivePowerDevice?> activePower)
+       public List<ActivePowerDevice?> Media(List<ActivePowerDevice?> activePower)
        {
-            ActivePowerDevice test = activePower[0];
-            DateTime? dataInizio = test.Date;
-            DateTime? dataSuccessiva = dataInizio?.AddDays(1);
+            List<DateTime?> date = new List<DateTime?>();
+            foreach (ActivePowerDevice a in activePower)
+            {
+                date.Add(a.Date);
+            }
+            List<DateTime?> dateOrdinate = date.OrderBy(n => n).ToList();
+
+
+
+            DateTime? inizio = dateOrdinate[0];
+            DateTime? fine = dateOrdinate[dateOrdinate.Count - 1];
+            DateTime? dataSuccessiva = inizio?.AddDays(1);
+            List<ActivePowerDevice?> Medie = new List<ActivePowerDevice?>();
+            
             List<ActivePowerDevice> sommaActivePower = new List<ActivePowerDevice>();
             float? somma = 0;
             float count = 0;
-            foreach(ActivePowerDevice a in activePower)
+            while (dataSuccessiva < fine)
             {
-                
-                if(a.Date < dataSuccessiva)
+                ActivePowerDevice mediaActPwr = new ActivePowerDevice();
+                foreach (ActivePowerDevice a in activePower)
                 {
-                    somma += a.ActivePower;
-                    count++;
+                    if (a.Date < dataSuccessiva && a.ActivePower != null)
+                    {
+                        somma += a.ActivePower;
+                        count++;
+                    }
                 }
+                float? media = somma / count;
+                mediaActPwr.ActivePower = media;
+                mediaActPwr.Date = dataSuccessiva;
+                Medie.Add(mediaActPwr);
+                dataSuccessiva = dataSuccessiva?.AddDays(1);
             }
-            float? media = somma / count;
+            return Medie;
         }
-
-
     }
 }
