@@ -3,14 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\testbozzi\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\speed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\speed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\speed.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\speed.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\models\\generatorspeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\models\\generatorspeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\models\\rotorspeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\models\\rotorspeed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\testbozzi\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\testbozzi\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\database\\activepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\database\\activepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,6 +39,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\testbozzi\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\models\\mediaactivepowergiornliero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\models\\mediaactivepowergiornliero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\database\\elencodispositividisponibili.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\database\\elencodispositividisponibili.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\database\\dbrotorgeneratorwind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\database\\dbrotorgeneratorwind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\models\\rotorgeneratorwind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\models\\rotorgeneratorwind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
     }
   ],
   "DocumentGroupContainers": [
@@ -30,6 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -69,32 +108,151 @@
               "ViewState": "AgIAAFMAAAAAAAAAAAAUwGoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T09:35:14.8Z",
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Speed.cshtml",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Speed.cshtml",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\Speed.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvyoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T12:55:27.887Z",
+              "IsPinned": true,
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 1,
+              "Title": "Speed.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Speed.cshtml.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml.cs",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\Speed.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:58:08.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Index.cshtml",
               "ToolTip": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml",
               "RelativeToolTip": "EsemipoSirius\\Pages\\Index.cshtml",
+<<<<<<< HEAD
               "ViewState": "AgIAABsAAAAAAAAAAAAiwEkAAAAAAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-19T14:19:13.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "EsemipoSirius\\Pages\\Index.cshtml.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAABYAAAAAAAAAAAAcwA8AAAAhAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:12:49.888Z",
+              "WhenOpened": "2025-04-16T12:57:43.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "generatorSpeed.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\generatorSpeed.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Models\\generatorSpeed.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\generatorSpeed.cs",
+              "RelativeToolTip": "EsemipoSirius\\Models\\generatorSpeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:45:34.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RotorSpeed.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\RotorSpeed.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Models\\RotorSpeed.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\RotorSpeed.cs",
+              "RelativeToolTip": "EsemipoSirius\\Models\\RotorSpeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:44:45.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T13:31:15.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ElencoDispositiviDisponibili.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Database\\ElencoDispositiviDisponibili.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Database\\ElencoDispositiviDisponibili.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Database\\ElencoDispositiviDisponibili.cs",
+              "RelativeToolTip": "EsemipoSirius\\Database\\ElencoDispositiviDisponibili.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:03:48.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DBRotorGeneratorWind.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Database\\DBRotorGeneratorWind.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Database\\DBRotorGeneratorWind.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Database\\DBRotorGeneratorWind.cs",
+              "RelativeToolTip": "EsemipoSirius\\Database\\DBRotorGeneratorWind.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:40:26.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RotorGeneratorWind.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\RotorGeneratorWind.cs",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Models\\RotorGeneratorWind.cs",
+              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Models\\RotorGeneratorWind.cs",
+              "RelativeToolTip": "EsemipoSirius\\Models\\RotorGeneratorWind.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:40:10.394Z",
               "EditorCaption": ""
             }
           ]

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "hI5YOmNB8h4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
+=======
+  "dgSpecHash": "HJqK98R66c4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
+>>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
   "expectedPackageFiles": [
     "C:\\Users\\Utente\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Utente\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
