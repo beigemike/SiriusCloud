@@ -1833,19 +1833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
-      "projectName": "EsemipoSirius",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
-      "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\TestBOZZI\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
       "projectName": "EsemipoSirius",
       "projectPath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\EsemipoSirius.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\obj\\",
->>>>>>> fe250a5f00133e66fef1ba2090e8b53ccb2a21ac
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

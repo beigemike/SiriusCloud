@@ -24,7 +24,7 @@ namespace EsemipoSirius.Pages
         public List<generatorSpeed> datigenerator = new List<generatorSpeed>();
 
 
-
+        
         public SpeedModel()
         {
             rpmRotor = new List<float?>();

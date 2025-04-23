@@ -1,0 +1,59 @@
+﻿@page
+@model EsemipoSirius.Pages.CosPhiModel
+@{
+}
+
+<form action="/CosPhi" method="get">
+    <select name="NomeDevice">
+        @foreach (var dispositivo in @Model.NomiDispositivi)
+        {
+            <option value=@dispositivo>@dispositivo</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+
+
+<div>
+    @Model.media
+</div>
+
+
+<div>
+    <canvas id="graficoCosPhi" width="400" height="400"></canvas>
+</div>
+
+@if(Model.media != null)
+{
+    <script>
+
+        let dataCosPhi = {
+                datasets: [{
+                 backgroundColor: 'rgb(54, 162, 235)',
+                 borderColor: 'rgb(54, 162, 235)',
+                 data:  [0.75]
+                }]
+            };
+
+            let optionsCosPhi = {
+                responsive: true,
+                rotation: -90,
+                circumference: 180
+            };
+            let ctxGeneratore = document.getElementById('graficoCosPhi').getContext('2d');
+
+            let ChartCosPhi = new Chart(ChartCosPhi, {
+                type: 'doughnut',
+                data: dataCosPhi,
+                options: optionsCosPhi
+            });
+
+    </script>
+}
+else
+{
+    <p>Il valore della media non è valido per il grafico.</p>
+}
+
+
