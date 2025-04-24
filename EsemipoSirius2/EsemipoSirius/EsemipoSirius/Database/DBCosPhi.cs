@@ -8,7 +8,7 @@ namespace EsemipoSirius.Database
         string Server = "(localdb)\\MSSQLLocalDB";
         string nomeDB = "DBSirius";
 
-        public float? getMediaCosPhi(string NomeDevice)
+        public float getMediaCosPhi(string NomeDevice)
         {
             List<CosPhi> elenco = new List<CosPhi>();
             string connectionString = "Server=" + Server + ";Database=" + nomeDB + ";Integrated Security=True;";
@@ -41,7 +41,7 @@ namespace EsemipoSirius.Database
                                 }
                                 else
                                 {
-                                    cosphi.ValoreCosPhi = null;
+                                    cosphi.ValoreCosPhi = 0;
                                 }
                                 elenco.Add(cosphi);
                             }
@@ -56,9 +56,9 @@ namespace EsemipoSirius.Database
             return media(elenco);
         }
 
-        private float? media(List<CosPhi> elenco)
+        private float media(List<CosPhi> elenco)
         {
-            float? somma = 0;
+            float somma = 0;
             foreach (CosPhi a in elenco)
             {
                 if (a.ValoreCosPhi != null)

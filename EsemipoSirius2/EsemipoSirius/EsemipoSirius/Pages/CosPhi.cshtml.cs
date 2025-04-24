@@ -15,13 +15,27 @@ namespace EsemipoSirius.Pages
         [BindProperty(SupportsGet = true)]
         public string NomeDevice { get; set; }
 
-        public float? media { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public float media { get; set; }     
+        
+        [BindProperty(SupportsGet = true)]
+        public float Mancante { get; set; }
+
+        public CosPhiModel()
+        {
+            media = 0;
+            Mancante = 1;
+        }
 
         public void OnGet()
         {
             NomiDispositivi = dispositiviDisponibili.DispositiviDisponibili();
             media = dbcosphi.getMediaCosPhi(NomeDevice);
-
+            if (float.IsNaN(media) || float.IsInfinity(media))
+            {
+                media = 0;
+            }
+            Mancante = 1 - media;
         }
     }
 }

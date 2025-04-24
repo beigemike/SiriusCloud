@@ -2,6 +2,6 @@
 {
     public class CosPhi
     {
-        public float? ValoreCosPhi { get; set; }
+        public float ValoreCosPhi { get; set; }
     }
 }

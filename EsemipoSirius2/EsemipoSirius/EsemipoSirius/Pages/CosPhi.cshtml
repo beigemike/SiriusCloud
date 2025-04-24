@@ -24,15 +24,15 @@
     <canvas id="graficoCosPhi" width="400" height="400"></canvas>
 </div>
 
-@if(Model.media != null)
-{
     <script>
 
         let dataCosPhi = {
                 datasets: [{
-                 backgroundColor: 'rgb(54, 162, 235)',
-                 borderColor: 'rgb(54, 162, 235)',
-                 data:  [0.75]
+            backgroundColor: [
+                '#00AEFF',
+                '#00FFA6'
+            ],
+            data: [@Html.Raw(Json.Serialize(Model.media)), @Html.Raw(Json.Serialize(Model.Mancante))]
                 }]
             };
 
@@ -41,19 +41,14 @@
                 rotation: -90,
                 circumference: 180
             };
-            let ctxGeneratore = document.getElementById('graficoCosPhi').getContext('2d');
+    let ctxChartCosPhi = document.getElementById('graficoCosPhi').getContext('2d');
 
-            let ChartCosPhi = new Chart(ChartCosPhi, {
+            let ChartCosPhi = new Chart(ctxChartCosPhi, {
                 type: 'doughnut',
                 data: dataCosPhi,
                 options: optionsCosPhi
             });
 
     </script>
-}
-else
-{
-    <p>Il valore della media non è valido per il grafico.</p>
-}
 
 
