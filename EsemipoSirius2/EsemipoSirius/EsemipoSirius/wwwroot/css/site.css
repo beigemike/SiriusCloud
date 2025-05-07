@@ -40,5 +40,20 @@ table {
 
 
 .graficiSpeed {
-    
+}
+
+.CosPhi {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+    .CosPhi div {
+        font-size: 40px;
+        margin-top: -10%;
+    }
+
+#colCosPhi {
+    margin-top: -20%;
+    font-size: 50px;
 }

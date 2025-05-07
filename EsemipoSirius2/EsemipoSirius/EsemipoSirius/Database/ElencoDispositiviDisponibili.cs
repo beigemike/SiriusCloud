@@ -16,7 +16,7 @@ namespace EsemipoSirius.Database
                 try
                 {
                     connection.Open();
-                    string query = "SELECT Device FROM DEVICE$";
+                    string query = "SELECT Device FROM DEVICE$ ORDER BY DEVICE$.Device";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())

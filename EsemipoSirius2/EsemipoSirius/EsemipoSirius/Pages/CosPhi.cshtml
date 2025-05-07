@@ -14,41 +14,50 @@
     <input type="submit" value="Submit" class="submit" />
 </form>
 
-
-<div>
-    @Model.media
+<div class="CosPhi">
+    <canvas id="graficoCosPhi" width="400" height="400">
+    </canvas>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                0
+            </div>
+            <div class="col" id="colCosPhi">
+                @Model.media
+            </div>
+            <div class="col">
+                1
+            </div>
+        </div>
+    </div>
 </div>
 
+<script>
 
-<div>
-    <canvas id="graficoCosPhi" width="400" height="400"></canvas>
-</div>
+    let dataCosPhi = {
+            datasets: [{
+        backgroundColor: [
+            '#ffe400',
+            '#cecece'
+        ],
+        data: [@Html.Raw(Json.Serialize(Model.media)), @Html.Raw(Json.Serialize(Model.Mancante))]
+            }]
+        };
 
-    <script>
-
-        let dataCosPhi = {
-                datasets: [{
-            backgroundColor: [
-                '#00AEFF',
-                '#00FFA6'
-            ],
-            data: [@Html.Raw(Json.Serialize(Model.media)), @Html.Raw(Json.Serialize(Model.Mancante))]
-                }]
-            };
-
-            let optionsCosPhi = {
-                responsive: true,
-                rotation: -90,
-                circumference: 180
-            };
+        let optionsCosPhi = {
+            responsive: true,
+            rotation: -90,
+            circumference: 180,
+            aspectRatio: 1
+        };
     let ctxChartCosPhi = document.getElementById('graficoCosPhi').getContext('2d');
 
-            let ChartCosPhi = new Chart(ctxChartCosPhi, {
-                type: 'doughnut',
-                data: dataCosPhi,
-                options: optionsCosPhi
-            });
+        let ChartCosPhi = new Chart(ctxChartCosPhi, {
+            type: 'doughnut',
+            data: dataCosPhi,
+            options: optionsCosPhi
+        });
 
-    </script>
+</script>
 
 
