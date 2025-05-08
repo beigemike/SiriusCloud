@@ -2,7 +2,7 @@
 {
     public class ActivePowerDevice
     {
-        public DateTime? Date { get; set; }
-        public float? ActivePower { get; set; }
+        public DateTime Date { get; set; }
+        public float ActivePower { get; set; }
     }
 }

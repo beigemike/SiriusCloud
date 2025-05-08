@@ -8,10 +8,9 @@ namespace EsemipoSirius.Pages
 {
     public class IndexModel : PageModel
     {
-        DBDispositivo db = new DBDispositivo();
         ActivePower dbActivePower = new ActivePower();
+        ElencoDispositiviDisponibili dbDispositivi = new ElencoDispositiviDisponibili();
 
-        public List<Dispositivo> elencoDispositivi { get; set; }
         public List<ActivePowerDevice> dispositivoActivePower { get; set; }
         public List<string> NomiDispositivi { get; set; }
 
@@ -27,7 +26,6 @@ namespace EsemipoSirius.Pages
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            elencoDispositivi = new List<Dispositivo>();
             dispositivoActivePower = new List<ActivePowerDevice>();
             NomiDispositivi = new List<string>();
 
@@ -37,8 +35,7 @@ namespace EsemipoSirius.Pages
 
         public void OnGet()
         {
-            NomiDispositivi = dbActivePower.DispositiviDisponibili();
-            elencoDispositivi = db.getDispositivi();
+            NomiDispositivi = dbDispositivi.DispositiviDisponibili();
             dispositivoActivePower = dbActivePower.getAll(NomeDevice);
 
             foreach (ActivePowerDevice a in dispositivoActivePower)

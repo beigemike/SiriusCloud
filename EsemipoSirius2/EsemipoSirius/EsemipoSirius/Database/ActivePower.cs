@@ -8,44 +8,11 @@ namespace EsemipoSirius.Database
     {
         string Server = "(localdb)\\MSSQLLocalDB";
         string nomeDB = "DBSirius";
-        
-
-        public List<string> DispositiviDisponibili()
-        {
-            List<string> elencoDispositivi = new List<string>();
-            string connectionString = "Server=" + Server + ";Database=" + nomeDB + ";Integrated Security=True;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = "SELECT Device FROM DEVICE$";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                string? dispositivo = reader["Device"].ToString();
-                                elencoDispositivi.Add(dispositivo);
-                            }
-                        }
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
-                return elencoDispositivi;
-        }
 
 
         public List<ActivePowerDevice> getAll(string NomeDevice)
         {
-            List<ActivePowerDevice> elenco = new List<ActivePowerDevice>();
+            List<ActivePowerDevice> totActivePower = new List<ActivePowerDevice>();
             string connectionString = "Server=" + Server + ";Database=" + nomeDB + ";Integrated Security=True;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -53,65 +20,40 @@ namespace EsemipoSirius.Database
                 try
                 {
                     connection.Open();
-                    string query = "SELECT DETTAGLIDEVICE$.Date, DETTAGLIDEVICE$.ActivePower " +
+                    string query = "SELECT CONVERT(DATE, DETTAGLIDEVICE$.Date) as Date, AVG(DETTAGLIDEVICE$.ActivePower) as ActivePower " +
                         "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
-                        "WHERE DEVICE$.Device = @Device";
+                        "WHERE DEVICE$.Device = @Device " +
+                        "GROUP BY CONVERT(DATE, DETTAGLIDEVICE$.Date) " +
+                        "ORDER BY CONVERT(DATE, DETTAGLIDEVICE$.Date)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Device", NomeDevice);
-                     
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            List<ActivePowerDevice> totActivePower = new List<ActivePowerDevice>();
                             while (reader.Read())
                             {
                                 ActivePowerDevice dispositivo = new ActivePowerDevice();
+                                dispositivo.Date = DateTime.Parse(reader["Date"].ToString());
+                                dispositivo.ActivePower = float.Parse(reader["ActivePower"].ToString());
 
-                                float ActPower;
-                                bool testActPower = float.TryParse(reader["ActivePower"].ToString(), out ActPower);
-
-                                if (testActPower)
-                                {
-                                    dispositivo.ActivePower = ActPower;
-                                }
-                                else
-                                {
-                                    dispositivo.ActivePower = null;
-                                }
-
-                                DateTime Date;
-                                bool testDate = DateTime.TryParse(reader["Date"].ToString(), out Date);
-
-                                if (testDate)
-                                {
-                                    dispositivo.Date = Date;
-                                }
-                                else
-                                {
-                                    dispositivo.Date = null;
-                                }
                                 totActivePower.Add(dispositivo);
-                                elenco.Add(dispositivo);
                             }
-                           return Media(totActivePower);
                         }
                     }
-
-
-
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
             }
-            return elenco;
+            return totActivePower;
         }
 
 
-       public List<ActivePowerDevice?> Media(List<ActivePowerDevice?> activePower)
-       {
+   /*     public List<ActivePowerDevice?> Media(List<ActivePowerDevice?> activePower)
+        {
             List<DateTime?> date = new List<DateTime?>();
             foreach (ActivePowerDevice a in activePower)
             {
@@ -125,7 +67,7 @@ namespace EsemipoSirius.Database
             DateTime? fine = dateOrdinate[dateOrdinate.Count - 1];
             DateTime? dataSuccessiva = inizio?.AddDays(1);
             List<ActivePowerDevice?> Medie = new List<ActivePowerDevice?>();
-            
+
             List<ActivePowerDevice> sommaActivePower = new List<ActivePowerDevice>();
             float? somma = 0;
             float count = 0;
@@ -147,6 +89,6 @@ namespace EsemipoSirius.Database
                 dataSuccessiva = dataSuccessiva?.AddDays(1);
             }
             return Medie;
-        }
-    }
-}
+        } */
+    }  
+} 

@@ -14,64 +14,98 @@
 </form>
 
 <div class="graficiSpeed">
-    <canvas id="graficoSpeedRotore" width="200" height="200"></canvas>
-    <canvas id="graficoSpeedGeneratore" width="200" height="200"></canvas>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <canvas id="graficoSpeedRotore" width="200" height="200"></canvas>
+            </div>
+            <div class="col">
+                <canvas id="graficoSpeedGeneratore" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
 
     let dataRotore = {
-            datasets: [{
-                label: '',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: @Html.Raw(Json.Serialize(Model.datiRotor))
-            }]
-        };
+        datasets: [{
+            label: '',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: @Html.Raw(Json.Serialize(Model.datiRotor))
+                    }]
+    };
 
-        let optionsRotore = {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: ''
+    let optionsRotore = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            }
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: 'xy', 
+                },
+                zoom: {
+                    enabled: true,
+                    mode: 'xy', 
+                    speed: 0.1, 
+                    threshold: 10
                 }
             }
-        };
+        },
+        aspectRatio: 1
+    };
 
-        let ctxRotore = document.getElementById('graficoSpeedRotore').getContext('2d');
+    let ctxRotore = document.getElementById('graficoSpeedRotore').getContext('2d');
 
 
-        let ChartRotore = new Chart(ctxRotore, {
-            type: 'scatter',
-            data: dataRotore,
-            options: optionsRotore
-        });
+    let ChartRotore = new Chart(ctxRotore, {
+        type: 'scatter',
+        data: dataRotore,
+        options: optionsRotore,
+    });
 
 
     let dataGeneratore = {
-            datasets: [{
-             backgroundColor: 'rgb(54, 162, 235)',
-             borderColor: 'rgb(54, 162, 235)',
-             data: @Html.Raw(Json.Serialize(Model.datigenerator))
-            }]
-        };
+        datasets: [{
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: @Html.Raw(Json.Serialize(Model.datigenerator))
+                    }]
+    };
 
-        let optionsGeneratore = {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: ''
+    let optionsGeneratore = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            }
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: 'xy',
+                },
+                zoom: {
+                    enabled: true,
+                    mode: 'xy',
+                    speed: 0.1,
+                    threshold: 10
                 }
             }
-        };
-        let ctxGeneratore = document.getElementById('graficoSpeedGeneratore').getContext('2d');
+        },
+        aspectRatio: 1
+    };
+    let ctxGeneratore = document.getElementById('graficoSpeedGeneratore').getContext('2d');
 
-        let ChartGeneratore = new Chart(ctxGeneratore, {
-            type: 'scatter',
-            data: dataGeneratore,
-            options: optionsGeneratore
-        });
+    let ChartGeneratore = new Chart(ctxGeneratore, {
+        type: 'scatter',
+        data: dataGeneratore,
+        options: optionsGeneratore
+    });
 
 </script>

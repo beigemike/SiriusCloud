@@ -4,33 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 
-<!--
-<h1> Estrai tutti i dispositivi</h1>
 <br />
-
-<table>
-    <tr>
-        <th>id</th>
-        <th>Device</th>
-        <th>altitudine</th>
-        <th>latitudine</th>
-        <th>longitudine</th>
-    </tr>
-    @foreach (var dispositivo in @Model.elencoDispositivi)
-    {
-        <tr>
-            <td>@dispositivo.IdDevice</td>
-            <td>@dispositivo.Device</td>
-            <td>@dispositivo.altitudine</td>
-            <td>@dispositivo.latitudine</td>
-            <td>@dispositivo.longitudine</td>
-        </tr>
-    }
-</table>
--->
-<br/>
-<br/>
-<br/>
+<br />
+<br />
 <h1> test activePower </h1>
 
 <form action="/Index" method="get">
@@ -40,7 +16,7 @@
             <option value=@dispositivo>@dispositivo</option>
         }
     </select>
-    <br/>
+    <br />
     <input type="submit" value="Submit" class="submit" />
 </form>
 
@@ -50,33 +26,34 @@
 
     let lables = @Html.Raw(Json.Serialize(Model.Date));
     let data = {
-            labels: lables, 
-            datasets: [{
-                label: 'Minuti mensili', 
-                backgroundColor: 'rgb(255, 99, 132)', 
-                borderColor: 'rgb(255, 99, 132)', 
-                data: @Html.Raw(Json.Serialize(Model.ActivePower)), 
-            }]
-        };
+        labels: lables,
+        datasets: [{
+            label: '',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: @Html.Raw(Json.Serialize(Model.ActivePower)),
+        }]
+    };
 
-        let options = {
-            responsive: true, 
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Grafico Media Minuti Mensili' 
-                }
-            }
-        };
+    let options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            },
+      
+        }
+    };
 
-        let ctx = document.getElementById('graficoPower').getContext('2d');
+    let ctx = document.getElementById('graficoPower').getContext('2d');
 
 
-        let myChart = new Chart(ctx, {
-            type: 'bar', 
-            data: data, 
-            options: options 
-        });
+    let myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
 
 </script>
 
