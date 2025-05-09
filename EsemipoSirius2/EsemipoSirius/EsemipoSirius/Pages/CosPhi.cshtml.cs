@@ -7,8 +7,9 @@ namespace EsemipoSirius.Pages
 {
     public class CosPhiModel : PageModel
     {
-        ElencoDispositiviDisponibili dispositiviDisponibili = new ElencoDispositiviDisponibili();
         DBCosPhi dbcosphi = new DBCosPhi();
+        public ElencoDispositiviDisponibili dispositiviDisponibili { get; set; }
+        public List<EfficienzaDispositivo> efficienzaDispositivo { get; set; }
 
         public List<string> NomiDispositivi { get; set; }
 
@@ -16,26 +17,24 @@ namespace EsemipoSirius.Pages
         public string NomeDevice { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public float media { get; set; }     
+        public CosPhi mediaCosPhi { get; set; }     
         
         [BindProperty(SupportsGet = true)]
         public float Mancante { get; set; }
 
         public CosPhiModel()
         {
-            media = 0;
             Mancante = 1;
+            dispositiviDisponibili = new ElencoDispositiviDisponibili();
+            efficienzaDispositivo = new List<EfficienzaDispositivo>();
         }
 
         public void OnGet()
         {
             NomiDispositivi = dispositiviDisponibili.DispositiviDisponibili();
-            media = dbcosphi.getMediaCosPhi(NomeDevice);
-            if (float.IsNaN(media) || float.IsInfinity(media))
-            {
-                media = 0;
-            }
-            Mancante = 1 - media;
+            mediaCosPhi = dbcosphi.getMediaCosPhi(NomeDevice);
+            Mancante = 1 - mediaCosPhi.ValoreCosPhi;
+            efficienzaDispositivo = dbcosphi.getEfficienzaCosPhi(NomeDevice);
         }
     }
 }

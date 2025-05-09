@@ -1,5 +1,6 @@
 ﻿using EsemipoSirius.Models;
 using Microsoft.Data.SqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace EsemipoSirius.Database
 {
@@ -8,9 +9,9 @@ namespace EsemipoSirius.Database
         string Server = "(localdb)\\MSSQLLocalDB";
         string nomeDB = "DBSirius";
 
-        public float getMediaCosPhi(string NomeDevice)
+        public CosPhi getMediaCosPhi(string NomeDevice)
         {
-            List<CosPhi> elenco = new List<CosPhi>();
+            CosPhi cosphi = new CosPhi();
             string connectionString = "Server=" + Server + ";Database=" + nomeDB + ";Integrated Security=True;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -18,7 +19,7 @@ namespace EsemipoSirius.Database
                 try
                 {
                     connection.Open();
-                    string query = "SELECT DETTAGLIDEVICE$.CosPhi " +
+                    string query = "SELECT AVG(DETTAGLIDEVICE$.CosPhi) as CosPhi " +
                         "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
                         "WHERE DEVICE$.Device = @Device";
 
@@ -30,20 +31,8 @@ namespace EsemipoSirius.Database
                         {
                             while (reader.Read())
                             {
-                                CosPhi cosphi = new CosPhi();
-
-                                float cosPhiValore;
-                                bool testCosPhi = float.TryParse(reader["CosPhi"].ToString(), out cosPhiValore);
-
-                                if (testCosPhi)
-                                {
-                                    cosphi.ValoreCosPhi = cosPhiValore;
-                                }
-                                else
-                                {
-                                    cosphi.ValoreCosPhi = 0;
-                                }
-                                elenco.Add(cosphi);
+                                float valore = float.Parse(reader["CosPhi"].ToString());
+                                cosphi.ValoreCosPhi = (float)Math.Round(valore, 2);
                             }
                         }
                     }
@@ -53,20 +42,62 @@ namespace EsemipoSirius.Database
                     Console.WriteLine(ex.ToString());
                 }
             }
-            return media(elenco);
+            return cosphi;
         }
 
-        private float media(List<CosPhi> elenco)
+
+        public List<EfficienzaDispositivo> getEfficienzaCosPhi(string NomeDevice)
         {
-            float somma = 0;
-            foreach (CosPhi a in elenco)
+            List<EfficienzaDispositivo> DettagliCosPhi = new List<EfficienzaDispositivo>();
+            string connectionString = "Server=" + Server + ";Database=" + nomeDB + ";Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                if (a.ValoreCosPhi != null)
+                try
                 {
-                    somma += a.ValoreCosPhi;
+                    connection.Open();
+                    string query = "SELECT ROW_NUMBER() OVER (ORDER BY DETTAGLIDEVICE$.Date) AS NumeroRiga, DETTAGLIDEVICE$.Date as Date, " +
+                        "DETTAGLIDEVICE$.CosPhi as CosPhi, DETTAGLIDEVICE$.[ActivePower] as ActivePower, DETTAGLIDEVICE$.[Reactive Power] as ReactivePower " +
+                        "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
+                        "WHERE DEVICE$.Device = @Device";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Device", NomeDevice);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                EfficienzaDispositivo cosphi = new EfficienzaDispositivo();
+                                cosphi.Id = int.Parse(reader["NumeroRiga"].ToString());
+                                cosphi.Date = DateTime.Parse(reader["Date"].ToString());
+
+                                if(reader["CosPhi"] != DBNull.Value)
+                                {
+                                    cosphi.CosPhi = float.Parse(reader["CosPhi"].ToString());
+                                }
+                                if (reader["ActivePower"] != DBNull.Value)
+                                {
+                                    cosphi.ActivePower = float.Parse(reader["ActivePower"].ToString());
+                                }
+                                if (reader["ReactivePower"] != DBNull.Value)
+                                {
+                                    cosphi.ReactivePower = float.Parse(reader["ReactivePower"].ToString());
+                                }
+
+
+
+                                DettagliCosPhi.Add(cosphi);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
                 }
             }
-            return somma / elenco.Count;
+            return DettagliCosPhi;
         }
 
     }

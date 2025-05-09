@@ -23,7 +23,7 @@
                 0
             </div>
             <div class="col" id="colCosPhi">
-                @Model.media
+                @Model.mediaCosPhi.ValoreCosPhi
             </div>
             <div class="col">
                 1
@@ -32,6 +32,34 @@
     </div>
 </div>
 
+<div class="container mt-5">
+    <h2>Tabella con Scroll</h2>
+    <div class="table-scroll">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Data</th>
+                    <th>CosPhi</th>
+                    <th>Active Power</th>
+                    <th>Reactive Power</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var a in Model.efficienzaDispositivo)
+                {
+                    <tr>
+                        <td>@a.Id</td>
+                        <td>@a.Date</td>
+                        <td>@a.CosPhi</td>
+                        <td>@a.ActivePower</td>
+                        <td>@a.ReactivePower</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 <script>
 
     let dataCosPhi = {
@@ -40,7 +68,7 @@
             '#ffe400',
             '#cecece'
         ],
-        data: [@Html.Raw(Json.Serialize(Model.media)), @Html.Raw(Json.Serialize(Model.Mancante))]
+        data: [@Html.Raw(Json.Serialize(Model.mediaCosPhi.ValoreCosPhi)), @Html.Raw(Json.Serialize(Model.Mancante))]
             }]
         };
 

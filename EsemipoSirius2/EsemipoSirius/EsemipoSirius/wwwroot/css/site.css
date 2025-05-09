@@ -54,3 +54,10 @@ table {
     margin-top: -20%;
     font-size: 50px;
 }
+
+
+.table-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    display: block;
+}
