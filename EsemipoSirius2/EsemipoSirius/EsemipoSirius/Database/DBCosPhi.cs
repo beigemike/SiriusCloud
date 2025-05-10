@@ -56,10 +56,12 @@ namespace EsemipoSirius.Database
                 try
                 {
                     connection.Open();
-                    string query = "SELECT ROW_NUMBER() OVER (ORDER BY DETTAGLIDEVICE$.Date) AS NumeroRiga, DETTAGLIDEVICE$.Date as Date, " +
-                        "DETTAGLIDEVICE$.CosPhi as CosPhi, DETTAGLIDEVICE$.[ActivePower] as ActivePower, DETTAGLIDEVICE$.[Reactive Power] as ReactivePower " +
+                    string query = "SELECT ROW_NUMBER() OVER (ORDER BY CONVERT(DATE,DETTAGLIDEVICE$.Date)) AS NumeroRiga, CONVERT(DATE,DETTAGLIDEVICE$.Date) as Date, " +
+                        "AVG(DETTAGLIDEVICE$.CosPhi) as CosPhi, AVG(DETTAGLIDEVICE$.[ActivePower]) as ActivePower, AVG(DETTAGLIDEVICE$.[Reactive Power]) as ReactivePower " +
                         "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
-                        "WHERE DEVICE$.Device = @Device";
+                        "WHERE DEVICE$.Device = @Device " +
+                        "GROUP BY CONVERT(DATE,DETTAGLIDEVICE$.Date) " +
+                        "ORDER BY CONVERT(DATE,DETTAGLIDEVICE$.Date)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Device", NomeDevice);

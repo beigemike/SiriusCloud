@@ -1,6 +1,8 @@
 ﻿using EsemipoSirius.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Hosting.Server;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
 
 namespace EsemipoSirius.Database
 {
@@ -19,9 +21,12 @@ namespace EsemipoSirius.Database
                 try
                 {
                     connection.Open();
-                    string query = "SELECT DETTAGLIDEVICE$.[Rotor Speed], DETTAGLIDEVICE$.[Wind Speed], DETTAGLIDEVICE$.[Generator Speed] " +
-                        "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
-                        "WHERE DEVICE$.Device = @Device";
+                    string query = "SELECT AVG(DETTAGLIDEVICE$.[Rotor Speed]) as RotorSpeed, AVG(DETTAGLIDEVICE$.[Wind Speed]) as WindSpeed, AVG(DETTAGLIDEVICE$.[Generator Speed]) as GeneratorSpeed " +
+                            "FROM DETTAGLIDEVICE$ INNER JOIN DEVICE$ ON DEVICE$.IdDevice = DETTAGLIDEVICE$.IdDeviceFK " +
+                            "WHERE DEVICE$.Device = @Device " +
+                            "GROUP BY DATEADD(HOUR, DATEDIFF(HOUR, 0, DETTAGLIDEVICE$.Date), 0)";
+
+
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -34,7 +39,7 @@ namespace EsemipoSirius.Database
                                 RotorGeneratorWind velocità = new RotorGeneratorWind();
 
                                 float RotorSpeed;
-                                bool testRotor = float.TryParse(reader["Rotor Speed"].ToString(), out RotorSpeed);
+                                bool testRotor = float.TryParse(reader["RotorSpeed"].ToString(), out RotorSpeed);
 
                                 if (testRotor)
                                 {
@@ -46,7 +51,7 @@ namespace EsemipoSirius.Database
                                 }
 
                                 float WindSpeed;
-                                bool testWind = float.TryParse(reader["Wind Speed"].ToString(), out WindSpeed);
+                                bool testWind = float.TryParse(reader["WindSpeed"].ToString(), out WindSpeed);
 
                                 if (testWind)
                                 {
@@ -58,7 +63,7 @@ namespace EsemipoSirius.Database
                                 }
 
                                 float GeneratorSpeed;
-                                bool testGenerator = float.TryParse(reader["Generator Speed"].ToString(), out GeneratorSpeed);
+                                bool testGenerator = float.TryParse(reader["GeneratorSpeed"].ToString(), out GeneratorSpeed);
 
                                 if (testGenerator)
                                 {
