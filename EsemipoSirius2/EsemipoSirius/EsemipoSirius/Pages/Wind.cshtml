@@ -1,0 +1,69 @@
+﻿@page
+@model EsemipoSirius.Pages.WindModel
+@{
+}
+
+<form action="/Wind" method="get">
+    <select name="NomeDevice">
+        @foreach (var dispositivo in @Model.NomiDispositivi)
+        {
+            <option value=@dispositivo>@dispositivo</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+
+<canvas id="graficoDir"></canvas>
+<script>
+
+    const datiCorretti = [
+      { x: 0, y: 0 },
+      { x: 360, y: 360 }
+    ];
+
+    let ctx = document.getElementById('graficoDir').getContext('2d');
+    let data = {
+        datasets: [{
+             type: 'scatter',
+            label: 'Direzione (°) - MEDIA',
+            backgroundColor: 'rgba(42, 91, 232, 1)',
+            borderColor: 'rgba(42, 91, 232, 1)',
+            data: @Html.Raw(Json.Serialize(Model.MediadatiDir)),
+            yAxisID: 'y'
+        }, {
+            type: 'line',
+            label: 'POSIZIONE CORRETTA',
+            backgroundColor: 'rgba(255, 0, 0, 1)',
+            borderColor: 'rgba(255, 0, 0, 1)',
+            data: datiCorretti,
+            borderDash: [5, 5],
+            pointRadius: 0,
+            borderWidth: 5,
+            yAxisID: 'y'
+        }, {
+            type: 'scatter',
+            label: 'Direzione (°)',
+            backgroundColor: 'rgba(115, 195, 255, 0.2)',
+            borderColor: 'rgba(115, 195, 255, 0.2)',
+            data: @Html.Raw(Json.Serialize(Model.datiDir)),
+            yAxisID: 'y'
+        }]
+    };
+
+    let options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            }
+        },
+        aspectRatio: 1
+    };
+    let ChartWind = new Chart(ctx, {
+        type: 'scatter',
+        data: data,
+        options: options,
+    });
+</script>

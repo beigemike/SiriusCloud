@@ -1,0 +1,83 @@
+﻿@page
+@model EsemipoSirius.Pages.TempModel
+@{
+}
+
+<form action="/Temp" method="get">
+    <select name="NomeDevice">
+        @foreach (var dispositivo in @Model.NomiDispositivi)
+        {
+            <option value=@dispositivo>@dispositivo</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Submit" class="submit" />
+</form>
+
+<div class="grafico">
+<canvas id="graficoTemp"></canvas>
+</div>
+
+<script>
+
+    let data = {
+        labels: @Html.Raw(Json.Serialize(Model.Date)),
+        datasets: [{
+            type: 'line',
+            label: 'Temperatura hub',
+            data: @Html.Raw(Json.Serialize(Model.hubTemp)),
+            borderColor: 'rgba(0, 145, 215, 0.8)',
+            backgroundColor: 'rgba(0, 145, 215, 0.8)',
+            pointRadius: 0
+        },{
+            type: 'line',
+            label: 'Temperatura top',
+            data: @Html.Raw(Json.Serialize(Model.TopTemp)),
+            borderColor: 'rgba(227, 187, 0, 0.8)',
+            backgroundColor: 'rgba(227, 187, 0, 0.8)',
+            pointRadius: 0
+        }, {
+            type: 'line',
+            label: 'Temperatura ambientale',
+            data: @Html.Raw(Json.Serialize(Model.AmbTemp)),
+            borderColor: 'rgba(9, 193, 7, 0.8)',
+            backgroundColor: 'rgba(9, 193, 7, 0.8)',
+            pointRadius: 0
+        }]
+    };
+
+    let options = {
+        responsive: true,
+            plugins: {
+                title: {
+                display: true,
+                text: ''
+            },
+            zoom: {
+                pan: {
+                enabled: true,
+                mode: 'xy'
+                },
+                zoom: {
+                wheel: { enabled: true },
+                pinch: { enabled: true },
+                mode: 'x'
+        }
+      }
+    },
+        aspectRatio: 1
+    };
+
+    let ctx = document.getElementById('graficoTemp').getContext('2d');
+
+
+    let myChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+    });
+
+
+</script>
+
+
