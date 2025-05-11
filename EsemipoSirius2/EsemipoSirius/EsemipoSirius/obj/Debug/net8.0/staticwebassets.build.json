@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hjKASOdpieQAOSpzIfzHpaocbOmDogF3rj3X8Ox5t4Y=",
+  "Hash": "rOApLxtNrpfJogNJQbsrZxRctxrpdsxrpTCajUywT0k=",
   "Source": "EsemipoSirius",
   "BasePath": "_content/EsemipoSirius",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jecrjofgz3",
-      "Integrity": "i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8=",
+      "Fingerprint": "9sqnh4nuwb",
+      "Integrity": "WRjRJqTG+ZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,6 +1321,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.9sqnh4nuwb.css",
+      "AssetFile": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1033"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WRjRJqTG+ZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 07:56:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9sqnh4nuwb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WRjRJqTG+ZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1331,7 +1376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "999"
+          "Value": "1033"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8=\""
+          "Value": "\"WRjRJqTG+ZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 12:52:59 GMT"
+          "Value": "Sun, 11 May 2025 07:56:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1398,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.jecrjofgz3.css",
-      "AssetFile": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "999"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 12:52:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jecrjofgz3"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8="
+          "Value": "sha256-WRjRJqTG+ZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc="
         }
       ]
     },

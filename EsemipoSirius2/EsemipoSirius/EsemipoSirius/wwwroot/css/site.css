@@ -61,3 +61,8 @@ table {
     overflow-y: auto;
     display: block;
 }
+
+
+.grafico {
+    width: 80%;
+}

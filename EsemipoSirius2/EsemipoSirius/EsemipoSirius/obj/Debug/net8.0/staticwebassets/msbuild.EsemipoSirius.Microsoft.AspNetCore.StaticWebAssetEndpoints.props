@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/EsemipoSirius/css/site.9sqnh4nuwb.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9sqnh4nuwb"},{"Name":"integrity","Value":"sha256-WRjRJqTG\u002BZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc="},{"Name":"label","Value":"_content/EsemipoSirius/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1033"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WRjRJqTG\u002BZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 07:56:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/EsemipoSirius/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"999"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 12:52:59 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/EsemipoSirius/css/site.jecrjofgz3.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jecrjofgz3"},{"Name":"integrity","Value":"sha256-i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8="},{"Name":"label","Value":"_content/EsemipoSirius/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"999"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022i7reDkcVWhYop4q0kA6Yf8nt2dBLlqYVhwwA/giQ2V8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 12:52:59 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WRjRJqTG\u002BZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1033"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WRjRJqTG\u002BZVopfrCfM2u14W5RcCPuKkeW2wgMVzAhjc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 07:56:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/EsemipoSirius/EsemipoSirius.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\EsemipoSirius.rfi9rkkoot.bundle.scp.css'))</AssetFile>
