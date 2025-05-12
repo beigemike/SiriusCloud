@@ -15,12 +15,23 @@
 </form>
 
 <div class="grafico">
-<canvas id="graficoTemp"></canvas>
+    <canvas id="graficoTemp"></canvas>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <canvas id="graficoOilTemp" width="200" height="200"></canvas>
+        </div>
+        <div class="col">
+            <canvas id="graficoOilPress" width="200" height="200"></canvas>
+        </div>
+    </div>
 </div>
 
 <script>
 
-    let data = {
+    let dataTemp = {
         labels: @Html.Raw(Json.Serialize(Model.Date)),
         datasets: [{
             type: 'line',
@@ -46,7 +57,7 @@
         }]
     };
 
-    let options = {
+    let optionsTemp = {
         responsive: true,
             plugins: {
                 title: {
@@ -68,15 +79,100 @@
         aspectRatio: 1
     };
 
-    let ctx = document.getElementById('graficoTemp').getContext('2d');
+    let ctxTemp = document.getElementById('graficoTemp').getContext('2d');
 
 
-    let myChart = new Chart(ctx, {
+    let myChartTemp = new Chart(ctxTemp, {
         type: 'line',
-        data: data,
-        options: options
+        data: dataTemp,
+        options: optionsTemp
     });
 
+        let dataOilTemp = {
+        labels: @Html.Raw(Json.Serialize(Model.Date)),
+        datasets: [{
+            type: 'line',
+            label: 'Temperatura Olio',
+            data: @Html.Raw(Json.Serialize(Model.OilTemp)),
+            borderColor: 'rgba(0, 145, 215, 0.8)',
+            backgroundColor: 'rgba(0, 145, 215, 0.8)',
+            pointRadius: 0
+        }]
+    };
+
+    let optionsOilTemp = {
+        responsive: true,
+            plugins: {
+                title: {
+                display: true,
+                text: ''
+            },
+            zoom: {
+                pan: {
+                enabled: true,
+                mode: 'xy'
+                },
+                zoom: {
+                wheel: { enabled: true },
+                pinch: { enabled: true },
+                mode: 'x'
+        }
+      }
+    },
+        aspectRatio: 1
+    };
+
+    let ctxOilTemp = document.getElementById('graficoOilTemp').getContext('2d');
+
+
+    let myChartOilTemp = new Chart(ctxOilTemp, {
+        type: 'line',
+        data: dataOilTemp,
+        options: optionsOilTemp
+    });
+
+        let dataOilPress = {
+        labels: @Html.Raw(Json.Serialize(Model.Date)),
+        datasets: [{
+            type: 'line',
+            label: 'Temperatura Olio',
+            data: @Html.Raw(Json.Serialize(Model.OilPress)),
+            borderColor: 'rgba(0, 145, 215, 0.8)',
+            backgroundColor: 'rgba(0, 145, 215, 0.8)',
+            pointRadius: 0
+        }]
+    };
+
+    let optionsOilPress = {
+        responsive: true,
+            plugins: {
+                title: {
+                display: true,
+                text: ''
+            },
+            zoom: {
+                pan: {
+                enabled: true,
+                mode: 'xy'
+                },
+                zoom: {
+                wheel: { enabled: true },
+                pinch: { enabled: true },
+                mode: 'x'
+        }
+      }
+    },
+        aspectRatio: 1
+    };
+
+    let ctxOilPress = document.getElementById('graficoOilPress').getContext('2d');
+
+
+    let myChartOilPress = new Chart(ctxOilPress, {
+        type: 'line',
+        data: dataOilPress,
+        options: optionsOilPress
+    });
 
 </script>
 
