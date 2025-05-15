@@ -4,25 +4,27 @@
     ViewData["Title"] = "Home page";
 }
 
-<br />
-<br />
-<br />
-<h1> test activePower </h1>
+<div>
+    <h1> Test activePower </h1>
+    <form action="/Index" method="get">
+        <select name="NomeDevice">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <br />
+        <input type="submit" value="Submit" class="submit" />
+    </form>
+</div>
 
-<form action="/Index" method="get">
-    <select name="NomeDevice">
-        @foreach (var dispositivo in @Model.NomiDispositivi)
-        {
-            <option value=@dispositivo>@dispositivo</option>
-        }
-    </select>
-    <br />
-    <input type="submit" value="Submit" class="submit" />
-</form>
-
-<div class="grafico">
-    <canvas id="graficoPower"></canvas>
-    <canvas id="graficoPlant"></canvas>
+<div class="grafico container-fluid" style="display: flex; max-width:1080px; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 500px;">
+        <canvas id="graficoPower"></canvas>
+    </div>
+    <div class="grafico" style="width: 300px; height: 250px; margin-left: 100px;">
+        <canvas id="graficoPlant"></canvas>
+    </div>
 </div>
 
 <script>
