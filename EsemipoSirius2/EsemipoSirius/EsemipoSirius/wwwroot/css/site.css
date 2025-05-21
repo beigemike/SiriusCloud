@@ -66,3 +66,50 @@ table {
 .grafico {
     width: 80%;
 }
+
+.submit {
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 6px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+    .submit:hover {
+        background-color: black;
+        color: white;
+        box-shadow: inset 0 0 0 2px white;
+}
+
+#NomeDevices {
+    width: 100%; /* larghezza totale del contenitore */
+    max-width: 400px; /* personalizzabile */
+    padding: 8px 12px;
+    border-radius: 10px; /* angoli arrotondati */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* leggera ombra */
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#NomeDevices:focus {
+        box-shadow: 0 0 10px rgba(0,0,0,0.3); /* ombra accentuata quando selezionato */
+        border-color: #888;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* spazio tra gli elementi */
+    flex-wrap: wrap;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

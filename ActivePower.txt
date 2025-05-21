@@ -1,0 +1,98 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="form-container">
+    <h1> Sirius<b>Cloud</b> </h1>
+    <form action="/Index" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
+
+<div class="grafico container-fluid" style="display: flex; max-width:1080px; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 500px;">
+        <canvas id="graficoPower"></canvas>
+    </div>
+    <div class="grafico" style="width: 300px; height: 250px; margin-left: 100px;">
+        <canvas id="graficoPlant"></canvas>
+    </div>
+</div>
+
+<script>
+
+    let lablesPower = @Html.Raw(Json.Serialize(Model.Date));
+    let dataPower = {
+        labels: lablesPower,
+        datasets: [{
+            label: '',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: @Html.Raw(Json.Serialize(Model.ActivePower)),
+        }]
+    };
+
+    let options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            },
+        },
+        aspectRatio: 1
+    };
+
+    let ctxPower = document.getElementById('graficoPower').getContext('2d');
+
+
+    let myChartPower = new Chart(ctxPower, {
+        type: 'bar',
+        data: dataPower,
+        options: options
+    });
+
+     let lablesElDisp = @Html.Raw(Json.Serialize(Model.Plant));
+    let dataElDisp = {
+        labels: lablesElDisp,
+        datasets: [{
+            label: '',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: @Html.Raw(Json.Serialize(Model.NumDisp)),
+        }]
+    };
+
+    let optionsElDisp = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            },
+        },
+        aspectRatio: 1
+    };
+
+    let ctxElDisp = document.getElementById('graficoPlant').getContext('2d');
+
+
+    let myChartElDispositivi = new Chart(ctxElDisp, {
+        type: 'bar',
+        data: dataElDisp,
+        options: optionsElDisp
+    });
+
+</script>
+
+
+
+
+
