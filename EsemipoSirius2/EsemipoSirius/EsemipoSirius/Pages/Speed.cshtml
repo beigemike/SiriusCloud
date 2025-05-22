@@ -2,35 +2,48 @@
 @model EsemipoSirius.Pages.SpeedModel
 @{
 }
-<form action="/Speed" method="get">
-    <select name="NomeDevice">
-        @foreach (var dispositivo in @Model.NomiDispositivi)
-        {
-            <option value=@dispositivo>@dispositivo</option>
-        }
-    </select>
+
+<div class="form-container">
+    <h1>
+        Monitoraggio Velocità Rotore e Generatore
+    </h1>
     <br />
-    <input type="submit" value="Submit" class="submit" />
-</form>
+    <div>Seleziona un dispositivo:</div>
+    <form action="/Speed" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
 
 <div class="graficiSpeed">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col rotor">
+                <div class="titolo-grafico">VELOCITÀ ROTORE</div>
                 <canvas id="graficoSpeedRotore" width="200" height="200"></canvas>
             </div>
-            <div class="col">
+            <div class="col generator">
+                <div class="titolo-grafico">VELOCITÀ GENERATORE</div>
                 <canvas id="graficoSpeedGeneratore" width="200" height="200"></canvas>
             </div>
         </div>
     </div>
 </div>
 
+<p class="spiegazione">
+    Questa pagina consente di monitorare in tempo reale la velocità del rotore e del generatore della pala eolica, fornendo dati fondamentali per l’analisi dinamica e la gestione ottimale delle prestazioni meccaniche.
+</p>
+
 <script>
 
     let dataRotore = {
         datasets: [{
-            label: '',
+            label: 'speed rotor',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: @Html.Raw(Json.Serialize(Model.datiRotor))
@@ -38,14 +51,39 @@
     };
 
     let optionsRotore = {
-        responsive: true,
+    responsive: true,
+        aspectRatio: 1,
         plugins: {
             title: {
                 display: true,
                 text: ''
+            },
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: 'xy'
+                },
+                zoom: {
+                    wheel: { enabled: true },
+                    pinch: { enabled: true },
+                    mode: 'x'
+                }
             }
         },
-        aspectRatio: 1
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Velocità del rotore (RPM)' 
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Velocità del vento (m/s)' 
+                }
+            }
+        }
     };
 
     let ctxRotore = document.getElementById('graficoSpeedRotore').getContext('2d');
@@ -60,6 +98,7 @@
 
     let dataGeneratore = {
         datasets: [{
+            label: 'speed generator',
             backgroundColor: 'rgb(54, 162, 235)',
             borderColor: 'rgb(54, 162, 235)',
             data: @Html.Raw(Json.Serialize(Model.datigenerator))
@@ -67,14 +106,40 @@
     };
 
     let optionsGeneratore = {
-        responsive: true,
+    responsive: true,
+        aspectRatio: 1,
         plugins: {
             title: {
                 display: true,
                 text: ''
+            },
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: 'xy'
+                },
+                zoom: {
+                    wheel: { enabled: true },
+                    pinch: { enabled: true },
+                    mode: 'x'
+                }
             }
         },
-        aspectRatio: 1
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Velocità del generatore (RPM)'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Velocità del vento (m/s)'
+                }
+            }
+        },
+
     };
     let ctxGeneratore = document.getElementById('graficoSpeedGeneratore').getContext('2d');
 

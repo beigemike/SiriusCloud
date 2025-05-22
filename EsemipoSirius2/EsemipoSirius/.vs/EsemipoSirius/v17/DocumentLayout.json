@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\",
+  "WorkspaceRootPath": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|f:\\games\\github\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\activepower.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\activepower.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|f:\\games\\github\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\temp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\temp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|f:\\games\\github\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\speed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\speed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|f:\\games\\github\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|c:\\users\\utente\\desktop\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|f:\\games\\github\\siriuscloud\\esemiposirius2\\esemiposirius\\esemiposirius\\pages\\cosphi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF66C4B6-7530-4109-ACAA-F6B4F5163D62}|EsemipoSirius\\EsemipoSirius.csproj|solutionrelative:esemiposirius\\pages\\cosphi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,41 +35,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "EsemipoSirius\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "EsemipoSirius\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAIwGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-21T12:51:27.919Z",
+              "Title": "ActivePower.cshtml",
+              "DocumentMoniker": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\ActivePower.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\ActivePower.cshtml",
+              "ToolTip": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\ActivePower.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\ActivePower.cshtml",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAJAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T13:51:39.384Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "EsemipoSirius\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Temp.cshtml",
+              "DocumentMoniker": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Temp.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Temp.cshtml",
+              "ToolTip": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Temp.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\Temp.cshtml",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAiwLMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T13:17:17.964Z",
+              "WhenOpened": "2025-05-22T16:05:41.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Utente\\Desktop\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Index.cshtml",
-              "RelativeToolTip": "EsemipoSirius\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAcwFgAAABOAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Speed.cshtml",
+              "DocumentMoniker": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\Speed.cshtml",
+              "ToolTip": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\Speed.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\Speed.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T12:55:36.094Z",
+              "WhenOpened": "2025-05-22T16:05:30.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CosPhi.cshtml",
+              "DocumentMoniker": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\CosPhi.cshtml",
+              "RelativeDocumentMoniker": "EsemipoSirius\\Pages\\CosPhi.cshtml",
+              "ToolTip": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\Pages\\CosPhi.cshtml",
+              "RelativeToolTip": "EsemipoSirius\\Pages\\CosPhi.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T15:50:54.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "EsemipoSirius\\wwwroot\\css\\site.css",
+              "ToolTip": "F:\\Games\\Github\\SiriusCloud\\EsemipoSirius2\\EsemipoSirius\\EsemipoSirius\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "EsemipoSirius\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-21T12:51:27.919Z",
               "EditorCaption": ""
             }
           ]

@@ -5,7 +5,11 @@
 }
 
 <div class="form-container">
-    <h1> Sirius<b>Cloud</b> </h1>
+    <h1>
+        Monitoraggio Active Power della Pala Eolica
+    </h1>
+    <br/>
+    <div>Seleziona un dispositivo:</div>
     <form action="/ActivePower" method="get" class="form-inline">
         <select name="NomeDevice" id="NomeDevices">
             @foreach (var dispositivo in @Model.NomiDispositivi)
@@ -19,8 +23,10 @@
 
 <div class="row-power">
     <div class="col-grafico">
-        <div class="titolo-grafico">ACTIVE POWER</div>
-        <canvas id="graficoPower"></canvas>
+        <div class="grafico-wrapper">
+            <div class="titolo-grafico">ACTIVE POWER</div>
+            <canvas id="graficoPower"></canvas>
+        </div>
     </div>
     <div class="col-plant-img">
         <canvas id="graficoPlant"></canvas>
@@ -28,6 +34,9 @@
     </div>
 </div>
 
+<p class="spiegazione">
+    Questa pagina consente di monitorare la potenza attiva erogata dalla pala eolica, fornendo dati precisi per l’analisi delle prestazioni e l’ottimizzazione dell’efficienza energetica.
+</p>
 <script>
 
     let lablesPower = @Html.Raw(Json.Serialize(Model.Date));
@@ -57,7 +66,29 @@
                 }
             }
         },
-        aspectRatio: 1
+        aspectRatio: 1,
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tempo',
+                    font: {
+                        size: 16
+                    },
+                    color: '#333'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Potenza Attiva (kW)',
+                    font: {
+                        size: 16
+                    },
+                    color: '#333'
+                }
+            }
+        }
     };
 
     let ctxPower = document.getElementById('graficoPower').getContext('2d');
@@ -96,8 +127,32 @@
                 }
             }
         },
-        aspectRatio: 1
+        aspectRatio: 1,
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Luogo',
+                    font: {
+                        size: 16
+                    },
+                    color: '#333'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Tempo',
+                    font: {
+                        size: 16
+                    },
+                    color: '#333'
+                }
+            }
+        }
     };
+
+      
 
     let ctxElDisp = document.getElementById('graficoPlant').getContext('2d');
 

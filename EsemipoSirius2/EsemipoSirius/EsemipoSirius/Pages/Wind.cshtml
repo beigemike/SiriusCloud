@@ -1,20 +1,35 @@
 ﻿@page
 @model EsemipoSirius.Pages.WindModel
 @{
+    ViewData["Title"] = "Wind dir";
 }
 
-<form action="/Wind" method="get">
-    <select name="NomeDevice">
-        @foreach (var dispositivo in @Model.NomiDispositivi)
-        {
-            <option value=@dispositivo>@dispositivo</option>
-        }
-    </select>
+<div class="form-container">
+    <h1>
+        Direzione del Vento
+    </h1>
     <br />
-    <input type="submit" value="Submit" class="submit" />
-</form>
+    <div>Seleziona un dispositivo:</div>
+    <form action="/Wind" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
 
-<canvas id="graficoDir"></canvas>
+<div class="Wind">
+    <div class="titolo-grafico">DIREZIONE PALA EOLICA</div>
+    <canvas id="graficoDir"></canvas>
+</div>
+
+<p class="spiegazione">
+    Questa pagina permette di visualizzare e analizzare in tempo reale la direzione del vento, fornendo dati fondamentali per la gestione ottimale della pala eolica e per l’ottimizzazione delle prestazioni del sistema.
+</p>
+
 <script>
 
     const datiCorretti = [
@@ -53,13 +68,27 @@
 
     let options = {
         responsive: true,
+        aspectRatio: 1,
         plugins: {
             title: {
                 display: true,
                 text: ''
             }
         },
-        aspectRatio: 1
+        scales: {
+        x: {
+            title: {
+                display: true,
+                text: 'direzione pala eolica (°)'
+            }
+        },
+        y: {
+            title: {
+                display: true,
+                text: 'direzione vento (°)'
+            }
+        }
+    }
     };
     let ChartWind = new Chart(ctx, {
         type: 'scatter',

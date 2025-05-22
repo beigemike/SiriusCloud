@@ -1,33 +1,47 @@
 ﻿@page
 @model EsemipoSirius.Pages.TempModel
 @{
+    ViewData["Title"] = "Temperature";
 }
 
-<form action="/Temp" method="get">
-    <select name="NomeDevice">
-        @foreach (var dispositivo in @Model.NomiDispositivi)
-        {
-            <option value=@dispositivo>@dispositivo</option>
-        }
-    </select>
+<div class="form-container">
+    <h1>
+        Monitoraggio Termico e Pressione Olio
+    </h1>
     <br />
-    <input type="submit" value="Submit" class="submit" />
-</form>
+    <div>Seleziona un dispositivo:</div>
+    <form action="/Temp" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
 
-<div class="grafico">
+<div class="grafico temp1">
+    <div class="titolo-grafico">TEMPERATURE</div>
     <canvas id="graficoTemp"></canvas>
 </div>
 
-<div class="container">
+<div class="container temp2">
     <div class="row">
         <div class="col">
+            <div class="titolo-grafico">TEMPERATURA OLIO</div>
             <canvas id="graficoOilTemp" width="200" height="200"></canvas>
         </div>
         <div class="col">
+            <div class="titolo-grafico">PRESSIONE OLIO</div>
             <canvas id="graficoOilPress" width="200" height="200"></canvas>
         </div>
     </div>
 </div>
+
+<p class="spiegazione">
+    Questa pagina consente di monitorare le principali temperature della pala eolica e la pressione dell’olio, fornendo dati affidabili per l’analisi termica e il controllo delle condizioni operative.
+</p>
 
 <script>
 
@@ -59,24 +73,38 @@
 
     let optionsTemp = {
         responsive: true,
-            plugins: {
-                title: {
+        aspectRatio: 1,
+        plugins: {
+            title: {
                 display: true,
                 text: ''
             },
             zoom: {
                 pan: {
-                enabled: true,
-                mode: 'xy'
+                    enabled: true,
+                    mode: 'xy'
                 },
                 zoom: {
-                wheel: { enabled: true },
-                pinch: { enabled: true },
-                mode: 'x'
+                    wheel: { enabled: true },
+                    pinch: { enabled: true },
+                    mode: 'x'
+                }
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tempo'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Temperatura (°C)'
+                }
+            }
         }
-      }
-    },
-        aspectRatio: 1
     };
 
     let ctxTemp = document.getElementById('graficoTemp').getContext('2d');
@@ -94,32 +122,46 @@
             type: 'line',
             label: 'Temperatura Olio',
             data: @Html.Raw(Json.Serialize(Model.OilTemp)),
-            borderColor: 'rgba(0, 145, 215, 0.8)',
-            backgroundColor: 'rgba(0, 145, 215, 0.8)',
+            borderColor: 'rgba(255, 205, 0, 0.8)',
+            backgroundColor: 'rgba(255, 205, 0, 0.8)',
             pointRadius: 0
         }]
     };
 
-    let optionsOilTemp = {
+        let optionsOilTemp = {
         responsive: true,
-            plugins: {
-                title: {
+        aspectRatio: 1,
+        plugins: {
+            title: {
                 display: true,
                 text: ''
             },
             zoom: {
                 pan: {
-                enabled: true,
-                mode: 'xy'
+                    enabled: true,
+                    mode: 'xy'
                 },
                 zoom: {
-                wheel: { enabled: true },
-                pinch: { enabled: true },
-                mode: 'x'
+                    wheel: { enabled: true },
+                    pinch: { enabled: true },
+                    mode: 'x'
+                }
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tempo'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Temperatura (°C)'
+                }
+            }
         }
-      }
-    },
-        aspectRatio: 1
     };
 
     let ctxOilTemp = document.getElementById('graficoOilTemp').getContext('2d');
@@ -135,34 +177,48 @@
         labels: @Html.Raw(Json.Serialize(Model.Date)),
         datasets: [{
             type: 'line',
-            label: 'Temperatura Olio',
+            label: 'Pressione Olio',
             data: @Html.Raw(Json.Serialize(Model.OilPress)),
-            borderColor: 'rgba(0, 145, 215, 0.8)',
-            backgroundColor: 'rgba(0, 145, 215, 0.8)',
+            borderColor: 'rgba(255, 205, 0, 0.8)',
+            backgroundColor: 'rgba(255, 205, 0, 0.8)',
             pointRadius: 0
         }]
     };
 
-    let optionsOilPress = {
+     let optionsOilPress = {
         responsive: true,
-            plugins: {
-                title: {
+        aspectRatio: 1,
+        plugins: {
+            title: {
                 display: true,
                 text: ''
             },
             zoom: {
                 pan: {
-                enabled: true,
-                mode: 'xy'
+                    enabled: true,
+                    mode: 'xy'
                 },
                 zoom: {
-                wheel: { enabled: true },
-                pinch: { enabled: true },
-                mode: 'x'
+                    wheel: { enabled: true },
+                    pinch: { enabled: true },
+                    mode: 'x'
+                }
+            }
+        },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tempo'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Pressione (psi)'
+                }
+            }
         }
-      }
-    },
-        aspectRatio: 1
     };
 
     let ctxOilPress = document.getElementById('graficoOilPress').getContext('2d');

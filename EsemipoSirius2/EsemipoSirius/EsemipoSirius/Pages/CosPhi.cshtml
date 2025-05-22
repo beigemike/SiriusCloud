@@ -1,65 +1,83 @@
 ﻿@page
 @model EsemipoSirius.Pages.CosPhiModel
 @{
+    ViewData["Title"] = "Cos Phi";
 }
 
-<form action="/CosPhi" method="get">
-    <select name="NomeDevice">
-        @foreach (var dispositivo in @Model.NomiDispositivi)
-        {
-            <option value=@dispositivo>@dispositivo</option>
-        }
-    </select>
+<div class="form-container">
+    <h1>
+        Monitoraggio del Fattore di Potenza (Cosφ)
+    </h1>
     <br />
-    <input type="submit" value="Submit" class="submit" />
-</form>
+    <div>Seleziona un dispositivo:</div>
+    <form action="/CosPhi" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
 
-<div class="CosPhi">
-    <canvas id="graficoCosPhi" width="400" height="400">
-    </canvas>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                0
-            </div>
-            <div class="col" id="colCosPhi">
-                @Model.mediaCosPhi.ValoreCosPhi
-            </div>
-            <div class="col">
-                1
+
+<div class="container-fluid DatiCosPhi" style="min-height: 80vh;">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column tabellaDati" style="height: 100%;">
+            <h2>Tabella riassuntiva</h2>
+            <div class="table-scroll">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Numero</th>
+                            <th>Data</th>
+                            <th>Cosφ</th>
+                            <th>Active Power</th>
+                            <th>Reactive Power</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var a in Model.efficienzaDispositivo)
+                        {
+                            <tr>
+                                <td>@a.Id</td>
+                                <td>@a.Date</td>
+                                <td>@a.CosPhi</td>
+                                <td>@a.ActivePower</td>
+                                <td>@a.ReactivePower</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="CosPhi">
+                <canvas id="graficoCosPhi" width="400" height="400">
+                </canvas>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            0
+                        </div>
+                        <div class="col" id="colCosPhi">
+                            @Model.mediaCosPhi.ValoreCosPhi
+                        </div>
+                        <div class="col">
+                            1
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div class="container mt-5">
-    <h2>Tabella con Scroll</h2>
-    <div class="table-scroll">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Numero</th>
-                    <th>Data</th>
-                    <th>CosPhi</th>
-                    <th>Active Power</th>
-                    <th>Reactive Power</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var a in Model.efficienzaDispositivo)
-                {
-                    <tr>
-                        <td>@a.Id</td>
-                        <td>@a.Date</td>
-                        <td>@a.CosPhi</td>
-                        <td>@a.ActivePower</td>
-                        <td>@a.ReactivePower</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
+<p class="spiegazione">
+    Questa pagina consente di monitorare il cosφ della pala eolica, fornendo dati precisi sul fattore di potenza per ottimizzare l’efficienza energetica e garantire una gestione stabile del sistema elettrico.
+</p>
 <script>
 
     let dataCosPhi = {
