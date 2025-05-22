@@ -4,85 +4,6 @@
     ViewData["Title"] = "Benvenuto in SiriusCloud";
 }
 
-<style>
-    .landing-container {
-        min-height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%);
-        padding: 40px 20px 40px 20px;
-        border-radius: 32px;
-        box-shadow: 0 6px 24px rgba(70,90,120,0.08);
-        max-width: 800px;
-        margin: 40px auto;
-    }
-
-    .landing-title {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #191a23;
-        margin-bottom: 18px;
-        margin-top: 0;
-        letter-spacing: 2px;
-    }
-
-        .landing-title b {
-            color: #2563eb;
-        }
-
-    .landing-subtitle {
-        font-size: 1.3rem;
-        color: #555;
-        margin-bottom: 32px;
-        text-align: center;
-        max-width: 600px;
-    }
-
-    .button-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonne */
-        grid-template-rows: repeat(2, 1fr); /* 2 righe */
-        gap: 20px;
-        width: 100%;
-        max-width: 660px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        justify-items: center;
-        align-items: center;
-    }
-
-        .button-grid form {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-
-    .start-btn {
-        padding: 14px 0;
-        width: 200px;
-        border-radius: 32px;
-        background: #2563eb;
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.1rem;
-        border: none;
-        box-shadow: 0 2px 12px rgba(50,80,180,0.08);
-        transition: background 0.2s, color 0.2s;
-        cursor: pointer;
-        letter-spacing: 1px;
-        display: block;
-        text-align: center;
-    }
-
-        .start-btn:hover {
-            background: #1742a3;
-            color: #fff;
-        }
-</style>
-
 <div class="landing-container">
     <h1 class="landing-title">Sirius<b>Cloud</b></h1>
     <div class="landing-subtitle">
@@ -91,6 +12,7 @@
     </div>
 
     <div class="button-grid">
+        <a href="/ActivePower"><button class="start-btn">ActivePower</button></a>
         <a href="/Wind"><button class="start-btn">Wind</button></a>
         <a href="/Speed"><button class="start-btn">Speed</button></a>
         <a href="/Temp"><button class="start-btn">Temperature</button></a>

@@ -660,8 +660,4 @@ F:\Games\Github\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug
 F:\Games\Github\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\EsemipoSirius.genruntimeconfig.cache
 F:\Games\Github\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\ref\EsemipoSirius.dll
 F:\Games\Github\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\bin\Debug\net8.0\EsemipoSirius.staticwebassets.endpoints.json
-C:\Users\Utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\staticwebassets\msbuild.EsemipoSirius.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\EsemipoS.6984E69F.Up2Date
+C:\Users\utente\Desktop\SiriusCloud\EsemipoSirius2\EsemipoSirius\EsemipoSirius\obj\Debug\net8.0\EsemipoSirius.csproj.CopyComplete

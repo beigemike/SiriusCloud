@@ -1,0 +1,111 @@
+﻿@page
+@model EsemipoSirius.Pages.ActivePowerModel
+@{
+    ViewData["Title"] = "Active Power";
+}
+
+<div class="form-container">
+    <h1> Sirius<b>Cloud</b> </h1>
+    <form action="/ActivePower" method="get" class="form-inline">
+        <select name="NomeDevice" id="NomeDevices">
+            @foreach (var dispositivo in @Model.NomiDispositivi)
+            {
+                <option value=@dispositivo>@dispositivo</option>
+            }
+        </select>
+        <input type="submit" value="Invia" class="submit" />
+    </form>
+</div>
+
+<div class="row-power">
+    <div class="col-grafico">
+        <div class="titolo-grafico">ACTIVE POWER</div>
+        <canvas id="graficoPower"></canvas>
+    </div>
+    <div class="col-plant-img">
+        <canvas id="graficoPlant"></canvas>
+        <img src="~/img/1000087323.jpg" alt="Immagine" class="img-plant" />
+    </div>
+</div>
+
+<script>
+
+    let lablesPower = @Html.Raw(Json.Serialize(Model.Date));
+    let dataPower = {
+        labels: lablesPower,
+        datasets: [{
+            label: 'valore active power',
+            backgroundColor: '#2563eb',
+            borderColor: '#2563e',
+            data: @Html.Raw(Json.Serialize(Model.ActivePower)),
+        }]
+    };
+
+    let options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: false,
+                text: 'ACTIVE POWER',
+                font: {
+                    size: 40
+                },
+                color: '#2563eb',
+                padding: {
+                    top: 10,
+                    bottom: 30
+                }
+            }
+        },
+        aspectRatio: 1
+    };
+
+    let ctxPower = document.getElementById('graficoPower').getContext('2d');
+
+
+    let myChartPower = new Chart(ctxPower, {
+        type: 'bar',
+        data: dataPower,
+        options: options
+    });
+
+    let lablesElDisp = @Html.Raw(Json.Serialize(Model.Plant));
+    let dataElDisp = {
+        labels: lablesElDisp,
+        datasets: [{
+            label: 'Numero campi eolici',
+            backgroundColor: '#2563eb',
+            borderColor: '#2563eb',
+            data: @Html.Raw(Json.Serialize(Model.NumDisp)),
+        }]
+    };
+
+    let optionsElDisp = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Località',
+                font: {
+                    size: 40
+                },
+                color: '#2563eb',
+                padding: {
+                    top: 10,
+                    bottom: 30
+                }
+            }
+        },
+        aspectRatio: 1
+    };
+
+    let ctxElDisp = document.getElementById('graficoPlant').getContext('2d');
+
+
+    let myChartElDispositivi = new Chart(ctxElDisp, {
+        type: 'bar',
+        data: dataElDisp,
+        options: optionsElDisp
+    });
+
+</script>
